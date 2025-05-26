@@ -1,0 +1,3 @@
+rootProject.name = 'MirageApi'
+
+include 'mirage-api', 'mirage-spigot-api', 'mirage-spigot-core', 'mirage-proxy-core', 'mirage-common'

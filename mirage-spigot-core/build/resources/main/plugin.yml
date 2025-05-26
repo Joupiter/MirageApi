@@ -1,0 +1,9 @@
+name: MirageCore
+version: 1.0.0
+main: fr.mirage.core.spigot.MirageSpigotPlugin
+
+commands:
+  rank:
+    description: "ok"
+  audi:
+    description: "audi"

@@ -1,0 +1,25 @@
+dependencies {
+    api project(':mirage-common')
+
+    compileOnly 'com.velocitypowered:velocity-api:3.4.0-SNAPSHOT'
+
+    api 'org.mongodb:mongodb-driver-sync:5.4.0'
+    api 'io.lettuce:lettuce-core:6.5.5.RELEASE'
+
+    api 'org.slf4j:slf4j-api:2.0.17'
+
+    api 'org.apache.logging.log4j:log4j-api:2.24.3'
+    api 'org.apache.logging.log4j:log4j-core:2.24.3'
+    api 'org.apache.logging.log4j:log4j-slf4j2-impl:2.24.3'
+
+    annotationProcessor 'com.velocitypowered:velocity-api:3.4.0-SNAPSHOT'
+}
+
+test {
+    useJUnitPlatform()
+}
+
+shadowJar {
+    archiveBaseName.set('MirageProxyCore')
+    archiveClassifier.set('')
+}

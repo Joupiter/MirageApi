@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/mirage-proxy-core/MirageApi.mirage-proxy-core.main.iml" filepath="$PROJECT_DIR$/.idea/modules/mirage-proxy-core/MirageApi.mirage-proxy-core.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/mirage-spigot-api/MirageApi.mirage-spigot-api.main.iml" filepath="$PROJECT_DIR$/.idea/modules/mirage-spigot-api/MirageApi.mirage-spigot-api.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/mirage-spigot-core/MirageApi.mirage-spigot-core.main.iml" filepath="$PROJECT_DIR$/.idea/modules/mirage-spigot-core/MirageApi.mirage-spigot-core.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/mirage-spigot-core/MirageApi.mirage-spigot-core.test.iml" filepath="$PROJECT_DIR$/.idea/modules/mirage-spigot-core/MirageApi.mirage-spigot-core.test.iml" />
+    </modules>
+  </component>
+</project>

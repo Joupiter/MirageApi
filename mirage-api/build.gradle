@@ -1,0 +1,18 @@
+dependencies {
+
+}
+
+tasks.register('publishApi') {
+    dependsOn ':api:publishToMavenLocal'
+}
+
+publishing {
+    publications {
+        shadow(MavenPublication) {
+            artifact shadowJar
+            groupId 'fr.mirage.api'
+            artifactId 'api'
+            version '1.0.0'
+        }
+    }
+}

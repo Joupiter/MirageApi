@@ -1,0 +1,39 @@
+ext {
+    nettyVersion = '4.2.0.Final'
+}
+
+dependencies {
+    api project(':mirage-common')
+    api project(':mirage-spigot-api')
+
+    api 'org.mongodb:mongodb-driver-sync:5.4.0'
+    api 'io.lettuce:lettuce-core:6.5.5.RELEASE'
+
+    api 'net.kyori:adventure-platform-bukkit:4.3.4'
+
+    api 'com.google.code.gson:gson:2.13.1'
+
+    api 'org.slf4j:slf4j-api:2.0.17'
+
+    api 'org.apache.logging.log4j:log4j-api:2.24.3'
+    api 'org.apache.logging.log4j:log4j-core:2.24.3'
+    api 'org.apache.logging.log4j:log4j-slf4j2-impl:2.24.3'
+
+    api 'io.netty:netty-buffer:$nettyVersion'
+    api 'io.netty:netty-handler:$nettyVersion'
+    api 'io.netty:netty-transport:$nettyVersion'
+
+    compileOnly 'net.titanvale:titanium-server:1.8.8-R0.1-SNAPSHOT'
+}
+
+test {
+    useJUnitPlatform()
+}
+
+shadowJar {
+    archiveBaseName.set('MirageCore')
+    archiveClassifier.set('')
+
+    relocate 'io.netty', 'fr.mirage.shaded.netty'
+    relocate 'com.google.gson', 'fr.mirage.shaded.gson'
+}

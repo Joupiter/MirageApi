@@ -1,0 +1,30 @@
+dependencies {
+    api project(':mirage-api')
+
+    compileOnly 'net.titanvale:titanium-server:1.8.8-R0.1-SNAPSHOT'
+
+    compileOnly 'io.github.revxrsal:lamp.common:4.0.0-rc.12'
+    compileOnly 'io.github.revxrsal:lamp.bukkit:4.0.0-rc.12'
+
+    compileOnly 'net.kyori:adventure-platform-bukkit:4.3.4'
+}
+
+tasks.register('publishSpigotApi') {
+    dependsOn ':spigot-api:publishToMavenLocal'
+}
+
+publishing {
+    publications {
+        shadow(MavenPublication) {
+            artifact shadowJar
+            groupId 'fr.mirage.api.spigot'
+            artifactId 'spigot-api'
+            version '1.0.0'
+        }
+    }
+}
+
+shadowJar {
+    archiveBaseName.set('MirageSpigotApi')
+    archiveClassifier.set('')
+}
